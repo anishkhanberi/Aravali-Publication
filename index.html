@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <!-- bootstrap Cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQ0Dh0I7H6rtrwz4/7P4lDj1p4EhsaZ68j5E6jz9xTr+vUu9KjkX7WNbj" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+
+    <div class="col-sm-12 topbar">
+        <div class="col-sm-6 rightcontact">
+            <a href="https://www.instagram.com/prahladramyadav?igsh=emM0emJocmg0Yncx" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/15TCANusow/"  target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://t.me/aravalipublication" target="_blank">
+                <i class="fa-brands fa-telegram "></i>
+            </a>
+            <a href="https://wa.me/+919358087121" target="_blank"> <i class="fa-brands fa-whatsapp"></i> </a>
+        </div>
+        <div class="col-sm-6 techsupport">
+            <ul>
+                <a href="#">
+                    <li>Contact Us</li>
+                </a>
+                <a href="#">
+                    <li>FAQ</li>
+                </a>
+                <a href="#">
+                    <li>About Us</li>
+                </a>
+            </ul>
+
+        </div>
+
+
+    </div>
+    <div class="col-sm-12 navbar">
+        <div class="col-sm-3 navbar-main">
+            <div class="navbar-polygon">
+                <img class="logo " src="./images/aravali_publication-removebg-preview.png" alt="">
+            </div>
+            <div class="navbar-poly"></div>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="col-sm-3  nav-items">
+            <ul>
+                <li><i class="fa-solid fa-house"></i>Home</li>
+                <a href="#">
+                    <li id="categoryBtn"><i class="fa-solid fa-list"></i>Category</li>
+                </a>
+                <li><i class="fa-regular fa-bookmark"></i>Top Seller</li>
+
+            </ul>
+        </div>
+        <div class="col-sm-3 search-container">
+            <input type="text" class="searchbar" placeholder="Search for books...">
+            <i id="searchicon" class="fas fa-search search-icon"></i>
+        </div>
+
+        <div class="col-sm-3 contactsupport">
+            <button class="SignUp"><i class="fas fa-user-plus"></i></button>
+            <button class="wish-list"><i class="fa-regular fa-heart"></i></button>
+            <a href="./cart.html">
+                <button class="Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </button>
+            </a>
+        </div>
+    </div>
+
+
+
+    <section class="hero">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img alt="A scenic view of a mountain range with a clear blue sky" height="400"
+                        src="./images/banner10.jfif" width="1200" />
+                </div>
+                <div class="slide">
+                    <img alt="A bustling cityscape at night with illuminated skyscrapers" height="400"
+                        src="./images/banner11.jfif" width="1200" />
+                </div>
+                <div class="slide">
+                    <img alt="A serene beach with golden sand and turquoise water" height="400"
+                        src="./images/banner12.jfif" width="1200" />
+                </div>
+                <div class="slide">
+                    <img alt="A dense forest with tall trees and sunlight filtering through" height="400"
+                        src="./images/banner13.jfif" width="1200" />
+                </div>
+                <div class="slide">
+                    <img alt="A picturesque countryside with rolling hills and a clear sky" height="400"
+                        src="./images/banner14.jfif" width="1200" />
+                </div>
+                <div class="slide">
+                    <img alt="A vibrant sunset over a calm lake with reflections in the water" height="500"
+                        src="./images/banner15.jfif" width="1200" />
+                </div>
+            </div>
+            <div class="navigation">
+                <i class="fas fa-chevron-left" onclick="prevSlide()">
+                </i>
+                <i class="fas fa-chevron-right" onclick="nextSlide()">
+                </i>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="head-text">
+        <h1>Trending Now : Top Seller</h1>
+    </div>
+    <div class="bookscard">
+        <button id="prevBtn">&#10094;</button>
+        <div class="slide-track">
+            <div class="card">
+                <img src="./images/book-removebg-preview.png" alt="Book 1" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹340.00 <s>₹450.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+
+            </div>
+            <div class="card">
+                <img src="./images/books2-removebg-preview.png" alt="Book 2" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹320.00 <s>₹400.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/books3-removebg-preview.png" alt="Book 3" width="150">
+                <h3 class="book-title">Every book tells a story.</h3>
+                <p>₹350.00 <s>₹400.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/books2-removebg-preview.png" alt="Book 2" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹320.00 <s>₹400.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/books3-removebg-preview.png" alt="Book 3" width="150">
+                <h3 class="book-title">Every book tells a story.</h3>
+                <p>₹350.00 <s>₹400.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/books2-removebg-preview.png" alt="Book 2" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹320.00 <s>₹400.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/books3-removebg-preview.png" alt="Book 3" width="150">
+                <h3 class="book-title">Every book tells a story.</h3>
+                <p>₹350.00 <s>₹400.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/books2-removebg-preview.png" alt="Book 2" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹320.00 <s>₹400.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/books3-removebg-preview.png" alt="Book 3" width="150">
+                <h3 class="book-title">Every book tells a story.</h3>
+                <p>₹350.00 <s>₹400.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/book-removebg-preview.png" alt="Book 1" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹340.00 <s>₹450.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/book-removebg-preview.png" alt="Book 1" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹340.00 <s>₹450.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/book-removebg-preview.png" alt="Book 1" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹340.00 <s>₹450.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/book-removebg-preview.png" alt="Book 1" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹340.00 <s>₹450.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/book-removebg-preview.png" alt="Book 1" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹340.00 <s>₹450.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/book-removebg-preview.png" alt="Book 1" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹340.00 <s>₹450.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+        </div>
+        <button id="nextBtn">&#10095;</button>
+    </div>
+
+    <div class="head-text">
+        <h1>Fiction</h1>
+    </div>
+    <div class="bookscard">
+        <button id="prevBtn">&#10094;</button>
+        <div class="slide-track">
+            <div class="card">
+                <img src="./images/book-removebg-preview.png" alt="Book 1" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹340.00 <s>₹450.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+
+            </div>
+            <div class="card">
+                <img src="./images/books2-removebg-preview.png" alt="Book 2" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹320.00 <s>₹400.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/books3-removebg-preview.png" alt="Book 3" width="150">
+                <h3 class="book-title">Every book tells a story.</h3>
+                <p>₹350.00 <s>₹400.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/books2-removebg-preview.png" alt="Book 2" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹320.00 <s>₹400.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/books3-removebg-preview.png" alt="Book 3" width="150">
+                <h3 class="book-title">Every book tells a story.</h3>
+                <p>₹350.00 <s>₹400.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/books2-removebg-preview.png" alt="Book 2" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹320.00 <s>₹400.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/books3-removebg-preview.png" alt="Book 3" width="150">
+                <h3 class="book-title">Every book tells a story.</h3>
+                <p>₹350.00 <s>₹400.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/books2-removebg-preview.png" alt="Book 2" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹320.00 <s>₹400.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/books3-removebg-preview.png" alt="Book 3" width="150">
+                <h3 class="book-title">Every book tells a story.</h3>
+                <p>₹350.00 <s>₹400.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/book-removebg-preview.png" alt="Book 1" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹340.00 <s>₹450.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/book-removebg-preview.png" alt="Book 1" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹340.00 <s>₹450.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/book-removebg-preview.png" alt="Book 1" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹340.00 <s>₹450.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/book-removebg-preview.png" alt="Book 1" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹340.00 <s>₹450.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/book-removebg-preview.png" alt="Book 1" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹340.00 <s>₹450.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/book-removebg-preview.png" alt="Book 1" width="150">
+                <h3 class="book-title">Read to explore new worlds.</h3>
+                <p>₹340.00 <s>₹450.00</s></p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+        </div>
+        <button id="nextBtn">&#10095;</button>
+    </div>
+
+    <div class="assured">
+        <!-- Popup 1 -->
+        <div class="overlay" id="overlay1"></div>
+        <div class="popup" id="popup1">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('popup1', 'overlay1')">&times;</span>
+                <h3>100% Genuine Books</h3>
+                <p>The books that you get are completely genuine. The genuinity of the publication and authenticity of
+                    the books are individually checked. You will never receive a pirated product.</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="img">
+                <img src="img/book-icon.svg" alt="">
+            </div>
+            <div class="etxt">
+                <h3>100% Genuine books</h3>
+                <h4 class="learn-more" onclick="openPopup('popup1', 'overlay1')">Learn More</h4>
+            </div>
+        </div>
+
+        <!-- Popup 2 -->
+        <div class="overlay" id="overlay2"></div>
+        <div class="popup" id="popup2">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('popup2', 'overlay2')">&times;</span>
+                <h3>Maximum Quality Assured</h3>
+                <p>The books that you get are completely genuine. The genuinity of the publication and authenticity of
+                    the books are individually checked. You will never receive a pirated product.</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="img">
+                <img src="img/book-icon.svg" alt="">
+            </div>
+            <div class="etxt">
+                <h3>Maximum Quality Assured</h3>
+                <h4 class="learn-more" onclick="openPopup('popup2', 'overlay2')">Learn More</h4>
+            </div>
+        </div>
+
+        <!-- Popup 3 -->
+        <div class="overlay" id="overlay3"></div>
+        <div class="popup" id="popup3">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('popup3', 'overlay3')">&times;</span>
+                <h3>Get What You See</h3>
+                <p>The books that you get are completely genuine. The genuinity of the publication and authenticity of
+                    the books are individually checked. You will never receive a pirated product.</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="img">
+                <img src="img/book-icon.svg" alt="">
+            </div>
+            <div class="etxt">
+                <h3>Get What You See</h3>
+                <h4 class="learn-more" onclick="openPopup('popup3', 'overlay3')">Learn More</h4>
+            </div>
+        </div>
+
+
+        <!-- Popup 4 -->
+        <div class="overlay" id="overlay3"></div>
+        <div class="popup" id="popup3">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('popup3', 'overlay3')">&times;</span>
+                <h3>Honest discounts</h3>
+                <p>We do not offer discounts just to attract you. The prices of the books are not falsely hiked to lure
+                    you
+                    into the greed of discounts. We offer flat discounts on MRP. The discount sales run throughout the
+                    year.
+                </p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="img">
+                <img src="img/book-icon.svg" alt="">
+            </div>
+            <div class="etxt">
+                <h3>Honest discounts</h3>
+                <h4 class="learn-more" onclick="openPopup('popup3', 'overlay3')">Learn More</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-section">
+        <h2 class="about-h2">About Our Bookstore</h2>
+        <p class="tagline">"A paradise for book lovers, where stories come to life!"</p>
+        <div class="about-container">
+            <div class="about-card">
+
+                <img class="about-img" src="./images/book-removebg-preview.png" alt="Book 1">
+                <p>We provide the best books across various genres, carefully curated for readers of all ages.</p>
+            </div>
+            <div class="about-card">
+
+                <img class="about-img" src="./images/books2-removebg-preview.png" alt="Book 2">
+                <p>Discover new stories and knowledge every day with our handpicked selections.</p>
+            </div>
+            <div class="about-card">
+
+                <img class="about-img" src="./images/books3-removebg-preview.png" alt="Book 3">
+                <p>Join our community of book lovers and explore exclusive deals and recommendations.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Section 1: Logo & About -->
+            <div class="footer-section">
+                <img alt="Bookstore Logo - A stylized open book with pages turning" class="footer-logo" height="150"
+                    src="./images/aravali_publication-removebg-preview.png"
+                    width="150" />
+                <p>
+                    Discover a world of books at our bookstore! From fiction to non-fiction, educational to bestsellers,
+                    we have something for everyone.
+                </p>
+                <p>
+                    Join our community of book lovers and stay updated with the latest releases, author events, and
+                    exclusive discounts.
+                </p>
+            </div>
+            <!-- Section 2: Quick Links -->
+            <div class="footer-section">
+                <h3>
+                    Quick Links
+                </h3>
+                <ul class="footer-anchor">
+                    <li>
+                        <i class="fas fa-home">
+                        </i>
+                        <a href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-th-list">
+                        </i>
+                        <a href="#">
+                            Categories
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-star">
+                        </i>
+                        <a href="#">
+                            Best Sellers
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-book-open">
+                        </i>
+                        <a href="#">
+                            New Arrivals
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope">
+                        </i>
+                        <a href="#">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Section 3: Customer Support -->
+            <div class="footer-section">
+                <h3>
+                    Customer Support
+                </h3>
+                <ul class="footer-anchor">
+                    <li>
+                        <i class="fas fa-question-circle">
+                        </i>
+                        <a href="#">
+                            FAQs
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-undo">
+                        </i>
+                        <a href="#">
+                            Return Policy
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-shipping-fast">
+                        </i>
+                        <a href="#">
+                            Shipping Info
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-user-secret">
+                        </i>
+                        <a href="#">
+                            Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-file-contract">
+                        </i>
+                        <a href="#">
+                            Terms &amp; Conditions
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- section Contact Us -->
+           <div class="footer-section">
+            <div class="Contact-US">
+                <h3>Contact-US</h3>
+                <p><img class="telephone" src="./images/telephone_724664.png" alt="">+919358087121</p>
+                <p><img class="telephone" src="./images/telephone_724664.png" alt="">+919982934869</p>
+                <p><i class="fa fa-location"></i><b>Address:</b>&nbsp; Plot number 1, Rajeev Nagar, Vidhyadhar Nagar Sector 3, Jaipur 302038</p>
+            </div>
+           </div>
+            <!-- Section 4: Social Media -->
+            <div class="Social-Media">
+                <h3>
+                    Follow Us
+                </h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/15TCANusow/"  target="_blank">
+                        <i class="fab fa-facebook fa-2x">
+                        </i>
+                    </a>
+                    <a href="https://t.me/aravalipublication" target="_blank">
+                        <i class="fa-brands fa-telegram fa-2x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/prahladramyadav?igsh=emM0emJocmg0Yncx " target="_blank">
+                        <i class="fab fa-instagram fa-2x">
+                        </i>
+                    </a>
+                    <a href="https://wa.me/+919358087121" target="_blank"> <i class="fa-brands fa-whatsapp fa-2x"></i> </a>
+                  
+                </div>
+                <p class="mt-4">
+                    Stay connected with us.
+                </p>
+            </div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3556.327817305778!2d75.78091047544102!3d26.95651627662103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDU3JzIzLjUiTiA3NcKwNDcnMDAuNiJF!5e0!3m2!1sen!2sin!4v1739363093813!5m2!1sen!2sin" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           
+            <!-- Section 6: Testimonials
+            <div class="footer-section testimonials">
+                <h3>
+                    What Our Customers Say
+                </h3>
+                <div class="testimonial-item">
+                    <p>
+                        "This bookstore has an amazing collection of books. I always find what I'm looking for!"
+                    </p>
+                    <p class="author">
+                        - Jane Doe
+                    </p>
+                </div>
+                <div class="testimonial-item">
+                    <p>
+                        "Great customer service and fast shipping. Highly recommend!"
+                    </p>
+                    <p class="author">
+                        - John Smith
+                    </p>
+                </div>
+                <div class="testimonial-item">
+                    <p>
+                        "I love the variety of genres available. There's something for everyone."
+                    </p>
+                    <p class="author">
+                        - Emily Johnson
+                    </p>
+                </div>
+            </div>
+             Section 7: Featured Books -->
+            <!-- <div class="footer-section featured-books">
+                <h3>
+                    Featured Books
+                </h3>
+                <div class="book-item">
+                    <img alt="Cover of the book 'The Great Gatsby' by F. Scott Fitzgerald" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/opMsLd8dD-1iJvnjFqm46NUbU_6eHIkQ45UWi3r5KpU.jpg"
+                        width="100" />
+                    <p>
+                        The Great Gatsby by F. Scott Fitzgerald
+                    </p>
+                </div>
+                <div class="book-item">
+                    <img alt="Cover of the book 'To Kill a Mockingbird' by Harper Lee" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/OYXtHlFQUbiPH-ta9vdhlm4ng8Xr8KHDrX_zu_yJV3A.jpg"
+                        width="100" />
+                    <p>
+                        To Kill a Mockingbird by Harper Lee
+                    </p>
+                </div>
+                <div class="book-item">
+                    <img alt="Cover of the book '1984' by George Orwell" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/XeiT-WY0_ByYDW6XRILYaJCjaPaAHuu_5dv1dQVrwf0.jpg"
+                        width="100" />
+                    <p>
+                        1984 by George Orwell
+                    </p>
+                </div>
+            </div> -->
+             <!-- Section 5: Newsletter -->
+             <!-- <div class="footer-section newsletter">
+               
+            </div> --> 
+        </div>
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p>
+                © 2025 Bookstore | All Rights Reserved | Designed by TechBro24
+            </p>
+        </div>
+    </footer>
+
+
+
+    <!-- Bootstrap CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-46qVhR72H4NfR8A7hfGLpz9z7rj3tVp3MxD7xv9bMoqSZ4tkjODxMpX0uXKzKveM"
+        crossorigin="anonymous"></script>
+
+    <!-- custom JS -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
